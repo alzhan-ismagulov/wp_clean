@@ -6,26 +6,22 @@
  * Learn more: https://developer.wordpress.org/themes/basics/template-files/
 */
 
-.site {
-	display: grid;
-	grid-template-columns: 25% auto;
-	grid-template-areas:
-		"header header"
-		"sidebar main"
-		"footer footer";
-}
-.site-header {
-	grid-area: header;
+.content-area {
+	float: right;
+	margin: 0 0 0 -25%;
+	width: 100%;
 }
 .site-main {
-	grid-area: main;
-	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+	margin: 0 0 0 25%;
 }
-.widget-area {
-	grid-area: sidebar;
+.site-content .widget-area {
+	float: left;
+	overflow: hidden;
+	width: 25%;
 }
 .site-footer {
-	grid-area: footer;
+	clear: both;
+	width: 100%;
 }
 
 .no-sidebar .content-area {

@@ -20,12 +20,10 @@
 		<?php
 		the_content();
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clean' ),
-				'after'  => '</div>',
-			)
-		);
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clean' ),
+			'after'  => '</div>',
+		) );
 		?>
 	</div><!-- .entry-content -->
 
@@ -43,7 +41,7 @@
 							),
 						)
 					),
-					wp_kses_post( get_the_title() )
+					get_the_title()
 				),
 				'<span class="edit-link">',
 				'</span>'
