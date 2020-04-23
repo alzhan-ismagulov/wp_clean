@@ -2,12 +2,9 @@
 get_header();
 ?>
 
-<?php if( is_front_page() && get_theme_mod( 'clean_home_category' ) ): ?>
 <div id="fh5co-portfolio">
-	<?php $query = new WP_Query(array(
-		'category_name' => get_theme_mod( 'clean_home_category' ),//Подключаем опцию сделанную в настройках
-	)); ?>
-	<?php if( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post();  ?>
+    
+    <?php if( have_posts() ) : $i = 1; while ( have_posts() ) : the_post();  ?>
 	
 	<?php if(has_post_thumbnail()){
 		$img_url = get_the_post_thumbnail_url();
@@ -19,7 +16,7 @@ get_header();
 				<div class="fh5co-portfolio-description">
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_content(''); ?></p>
-					<p><a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read more', 'clean'); ?></a></p>
+					<p><a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read more', 'clean') ?></a></p>
 				</div>
 			</div>
 	
@@ -28,9 +25,8 @@ get_header();
 	<?php else: ?>
 
 	<?php endif; ?>
-	<?php wp_reset_postdata(  ); ?>
 
 </div>
-	<?php endif; ?>
+
 <?php
 get_footer();

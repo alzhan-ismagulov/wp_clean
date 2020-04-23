@@ -2,12 +2,13 @@
 get_header();
 ?>
 
-<?php if( is_front_page() && get_theme_mod( 'clean_home_category' ) ): ?>
+<?php if( get_theme_mod( 'clean_home_category' ) ): ?>
 <div id="fh5co-portfolio">
 	<?php $query = new WP_Query(array(
 		'category_name' => get_theme_mod( 'clean_home_category' ),//Подключаем опцию сделанную в настройках
 	)); ?>
-	<?php if( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post();  ?>
+    
+    <?php if( $query->have_posts() ) : $i = 1; while ( $query->have_posts() ) : $query->the_post();  ?>
 	
 	<?php if(has_post_thumbnail()){
 		$img_url = get_the_post_thumbnail_url();
