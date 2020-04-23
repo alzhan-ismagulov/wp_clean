@@ -39,11 +39,6 @@
                         'theme_location' => 'menu-1',
                         'menu_class' => 'nav navbar-nav navbar-right',
                     ) ); ?>
-                        <!-- <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="index.html"><span>Home <span class="border"></span></span></a></li>
-                            <li><a href="right-sidebar.html"><span>Right Sidebar <span class="border"></span></span></a></li>
-                            <li><a href="left-sidebar.html"><span>Left Sidebar <span class="border"></span></span></a></li>
-                        </ul> -->
                     </div>
                 </div>
             </div>

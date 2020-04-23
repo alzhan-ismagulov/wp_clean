@@ -19,7 +19,7 @@ get_header();
 				<div class="fh5co-portfolio-description">
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_content(''); ?></p>
-					<p><a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read more', 'clean') ?></a></p>
+					<p><a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('Read more', 'clean'); ?></a></p>
 				</div>
 			</div>
 	
